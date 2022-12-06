@@ -6,7 +6,11 @@ export default {
       car:Object
     },
     template:`
-        <p @click="loadCarData">{{car.name}}</p>
+        <div @click="loadCarData" class="carItem">
+            <h1>{{car.name}}</h1>
+            <img :src='"images/" + car.images[0]' alt="car">
+        </div>
+        
     `,
     methods:{
         loadCarData(){
