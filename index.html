@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-
+    <title>Mini Project</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<h1>Cooper</h1>
+<main id="app">
+    <cooper-car @loadcardata="loadCarInfo" v-for="car in cars" :car="car"></cooper-car>
 
+
+    <more-info @closeWindow="this.showWindow=false" v-if="showWindow" :data="carInfo"></more-info>
+</main>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./js/main.js" type="module" defer></script>
 </body>
 </html>
